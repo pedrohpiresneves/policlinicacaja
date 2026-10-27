@@ -271,12 +271,12 @@ footer{background:var(--petrol);color:var(--on-petrol)}
 
 <script>
 const GROUPS=[
-  ["Mulher e homem",["Ginecologia","Obstetrícia","Urologia"]],
-  ["Clínica e prevenção",["Clínica Médica","Endocrinologia","Geriatria","Psiquiatria"]],
-  ["Criança e pele",["Pediatria","Dermatologia"]],
+  ["Mulher e Homem",["Ginecologia","Obstetrícia","Urologia"]],
+  ["Clínica e Prevenção",["Clínica Médica","Endocrinologia","Geriatria","Psiquiatria"]],
+  ["Criança e Pele",["Pediatria","Dermatologia"]],
   ["Cirurgia",["Cirurgia Geral","Pequenas Cirurgias","Cirurgia Vascular (Angiologia)"]],
-  ["Ossos e movimento",["Ortopedia","Fisioterapia"]],
-  ["Boca e alimentação",["Odontologia","Nutrição"]]
+  ["Ossos e Movimento",["Ortopedia","Fisioterapia"]],
+  ["Boca e Alimentação",["Odontologia","Nutrição"]]
 ];
 const box=document.getElementById('groups');
 box.innerHTML=GROUPS.map(([g,items])=>`<div class="group reveal"><h3>${g}<small>${items.length}</small></h3><ul>${items.map(s=>`<li><a target="_blank" rel="noopener" href="https://wa.me/5583993750880?text=${encodeURIComponent('Olá! Gostaria de agendar uma consulta de '+s+'.')}">${s}<span>Agendar →</span></a></li>`).join('')}</ul></div>`).join('');
