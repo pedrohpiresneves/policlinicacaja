@@ -279,7 +279,7 @@ const GROUPS=[
   ["Boca e Alimentação",["Odontologia","Nutrição"]]
 ];
 const box=document.getElementById('groups');
-box.innerHTML=GROUPS.map(([g,items])=>`<div class="group reveal"><h3>${g}<small>${items.length}</small></h3><ul>${items.map(s=>`<li><a target="_blank" rel="noopener" href="https://wa.me/5583993750880?text=${encodeURIComponent('Olá! Gostaria de agendar uma consulta de '+s+'.')}">${s}<span>Agendar →</span></a></li>`).join('')}</ul></div>`).join('');
+box.innerHTML=GROUPS.map(([g,items])=>`<div class="group reveal"><h3>${g}<small>${items.length}</small></h3><ul>${items.map(s=>`<li><a target="_blank" rel="noopener" href="https://wa.me/5583993750880?text=${encodeURIComponent('Olá! Tudo bem? Gostaria de agendar um horário para atendimento em '+s+'.')}">${s}<span>Agendar →</span></a></li>`).join('')}</ul></div>`).join('');
 document.getElementById('copy').addEventListener('click',e=>{
   const b=e.currentTarget;
   navigator.clipboard.writeText('83993750880').then(()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1800)}).catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('tel'));const s=getSelection();s.removeAllRanges();s.addRange(r)});
